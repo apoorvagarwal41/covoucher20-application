@@ -43,7 +43,7 @@
     />
   </head>
   <body data-gr-c-s-loaded="true" cz-shortcut-listen="true">
-    <header>
+    <header class="nav-desktop">
       <div id="top">
         <div class="logo">
           <a class="covoucher20 mark" href="/">
@@ -58,6 +58,45 @@
           ><a class="primary signup" href="/users/signup">Sign up</a>
         </div>
       </div>
+    </header>
+    <header class="nav-mobile">
+      <ul class="mobile-navlist close">
+        <li class="mobile-navlist-item">
+          <a href="/">Home</a>
+        </li>
+        <li class="mobile-navlist-item">
+          <a href="/mission">Mission</a>
+        </li>
+        <li class="mobile-navlist-item">
+          <a href="/science">The science</a>
+        </li>
+        <li class="mobile-navlist-item">
+          <a href="/team">Team</a>
+        </li>
+        <li class="mobile-navlist-item">
+          <a href="/faq">FAQ</a>
+        </li>
+        <li class="mobile-navlist-item">
+          <a href="/policies">Policies</a>
+        </li>
+        <li class="mobile-navlist-item">
+          <a href="/contact">Contact us</a>
+        </li>
+        <li class="mobile-navlist-item">
+          <a href="/users/login">Log in</a>
+        </li>
+        <li class="mobile-navlist-item">
+          <a class="primary signup" href="/users/signup">Sign up</a>
+        </li>
+      </ul>
+      <img
+        src="/assets/images/icons8-menu-48.png"
+        alt="ham-icon"
+        class="ham-icon"
+      />
+      <a class="logo" href="/">
+        <img src="/assets/images/logo_small-f274cf91.png" alt="" />
+      </a>
     </header>
     <div class="intro">
       <div class="owners">
@@ -75,7 +114,7 @@
           </p>
         </div>
 
-        <div class="owl-carousel owl-theme pt--4 pb--4">
+        <div class="owl-carousel owl-theme pt--4">
           <img
             class="slider-image"
             src="/assets/images/Bars.jpg"
@@ -229,24 +268,36 @@
             >
           </div>
         </div>
-        <h1>How it works</h1>
-        <ul>
-          <li>
-            Local businesses sign up, enter their location, explain their
-            business, and enter details.
-          </li>
-          <li>
-            Businesses share a direct link to their CoVoucher20 page with their
-            customer base.
-          </li>
-          <li>
-            Patrons sign up and buy vouchers that they would like to use after
-            the pandemic.
-          </li>
-          <li>
-            Businesses receive money immediately and are better able to cope.
-          </li>
-        </ul>
+
+        <div class="how-it-works pt--2 pb--4">
+          <h1>How it works</h1>
+          <hr class="divier mt--2 mb--2" />
+          <ul>
+            <li>
+              <span class="count">1</span>
+              Local businesses sign up, enter their location, explain their
+              business, and enter details.
+            </li>
+            <li>
+              <span class="count">2</span>
+
+              Businesses share a direct link to their CoVoucher20 page with
+              their customer base.
+            </li>
+            <li>
+              <span class="count">3</span>
+
+              Patrons sign up and buy vouchers that they would like to use after
+              the pandemic.
+            </li>
+            <li>
+              <span class="count">4</span>
+
+              Businesses receive money immediately and are better able to cope.
+            </li>
+          </ul>
+        </div>
+
         <h2>Can CoVoucher20 really save a local business?</h2>
         <p>
           This is our most frequent question, so we dedicated a large part of
@@ -258,21 +309,19 @@
           CoVoucher20 works for businesses in over 30 countries, and for
           consumers all over the world.
         </p>
-        <div class="signup-buttons">
-          <div class="small-button">
-            <a class="button primary signup" href="/users/signup">Sign up</a>
-          </div>
+        <div class="signup-buttons mt--2 pb--3">
+          <a class="button primary signup" href="/users/signup">Sign up</a>
         </div>
       </div>
     </div>
-    <div id="content"></div>
     <footer>
       <p class="copyright">
-        © 2020 The CoVoucher Authors, all rights reserved. CoVoucher,
-        CoVoucher20, and CoVoucher-20 are trademarks of Covoucher Ltd, a company
-        limited by shares and registered in England and Wales (12526044), and of
-        Genuine Happiness, Serviços Digitais Unipessoal Lda, a company limited
-        by shares and registered in Portugal (515934151).
+        © 2020 The CoVoucher Authors, All rights reserved.
+        <br />
+        CoVoucher, CoVoucher20, and CoVoucher-20 are trademarks of Covoucher
+        Ltd, a company limited by shares and registered in England and Wales
+        (12526044), and of Genuine Happiness, Serviços Digitais Unipessoal Lda,
+        a company limited by shares and registered in Portugal (515934151).
       </p>
     </footer>
     <script src="/javascripts/covoucher20.js"></script>
@@ -326,6 +375,23 @@
             items: 3,
           },
         },
+      })
+
+      document.querySelector('.ham-icon').addEventListener('click', (e) => {
+        const navlist = document.querySelector('.mobile-navlist')
+        if (navlist.classList.contains('close')) {
+          navlist.classList.remove('close')
+          navlist.classList.add('open')
+        }
+        e.stopPropagation()
+      })
+
+      document.body.addEventListener('click', (e) => {
+        const navlist = document.querySelector('.mobile-navlist')
+        if (navlist.classList.contains('open')) {
+          navlist.classList.remove('open')
+          navlist.classList.add('close')
+        }
       })
     </script>
   </body>

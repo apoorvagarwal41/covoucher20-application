@@ -42,6 +42,7 @@ body {
   color: #292f45;
   background-color: #fffbfa;
   font-family: Raleway, Arial, sans-serif;
+  line-height: 1.6;
 }
 
 header,
@@ -60,6 +61,7 @@ section {
   align-items: center;
   width: 100%;
   max-width: 1000px;
+  padding: 1rem 0;
 }
 
 header {
@@ -112,15 +114,8 @@ a:hover {
   text-align: center;
 }
 
-#top .logo {
-  flex: 1;
-}
-
 #top a.covoucher20 {
   display: inline-block;
-  min-width: 215px;
-  padding-left: 75px;
-  background: url(/images/covoucher20.svg) left center no-repeat;
 }
 
 #top .links a {
@@ -149,6 +144,7 @@ h1.title.short-form {
   display: block;
   width: 60%;
   margin: 0 auto;
+  max-width: 600px;
 }
 
 /* Notices */
@@ -165,11 +161,9 @@ h1.title.short-form {
 
 /* Footer */
 footer {
-  position: fixed;
   background-color: white;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  border-top: 2px solid #008080;
+  padding: 1rem;
 }
 
 .annotation {
@@ -598,11 +592,12 @@ form a.button {
 /* Home */
 .intro {
   max-width: 70%;
-  padding: 60px 0 80px;
+  padding: 80px 0 80px;
 }
 @media (max-width: 900px) {
   .intro {
     max-width: 85%;
+    padding-top: 80px;
   }
 }
 
@@ -612,8 +607,13 @@ form a.button {
 
 .intro h1 {
   font-weight: 500;
-  font-size: 42px;
+  font-size: 2.5rem;
   letter-spacing: 0.01em;
+}
+@media (max-width: 900px) {
+  .intro h1 {
+    font-size: 1.7rem;
+  }
 }
 
 .intro h2 {
@@ -634,16 +634,13 @@ form a.button {
   }
 }
 .features .features__tile {
-  padding: 1rem;
+  padding: 2rem;
   flex-basis: 31%;
   background: #f4f4f4;
   position: relative;
   border-radius: 1.2rem;
 }
 @media (max-width: 900px) {
-  .features .features__tile {
-    padding-bottom: 2rem;
-  }
   .features .features__tile:not(:first-child) {
     margin-top: 2rem;
   }
@@ -651,7 +648,7 @@ form a.button {
 .features .features__tile a {
   position: absolute;
   bottom: 20px;
-  left: 20px;
+  left: 2rem;
 }
 .features .features__tile hr {
   display: block;
@@ -663,8 +660,8 @@ form a.button {
 }
 .features .features__tile img {
   display: block;
-  width: 80%;
   margin: auto;
+  max-height: 35px;
 }
 
 .features h3 {
@@ -1039,13 +1036,24 @@ section.products {
 .word-from-founder .header .founder-info h1 {
   font-size: 2.4rem;
 }
+@media (max-width: 900px) {
+  .word-from-founder .header .founder-info h1 {
+    font-size: 1.5rem;
+  }
+}
 .word-from-founder .header .founder-info p {
   margin-top: 0.6rem;
+  font-style: italic;
 }
 .word-from-founder .header img {
   display: block;
-  height: 130px;
+  height: 8rem;
   margin-right: 1rem;
+}
+@media (max-width: 900px) {
+  .word-from-founder .header img {
+    height: 6rem;
+  }
 }
 .word-from-founder .content {
   z-index: 1;
@@ -1055,6 +1063,101 @@ section.products {
   margin: auto;
   margin-top: -4rem;
   background: #f4f4f4;
+}
+
+.how-it-works ul {
+  list-style-type: none;
+}
+.how-it-works ul li {
+  background: #f4f4f4;
+  padding: 1rem;
+  padding-left: 4rem;
+  position: relative;
+}
+@media (max-width: 900px) {
+  .how-it-works ul li {
+    border-radius: 1rem;
+  }
+}
+.how-it-works ul li .count {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  border-radius: 50%;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  background: #008080;
+  height: 30px;
+  width: 30px;
+  margin-right: 0.5rem;
+}
+.how-it-works ul li:not(:first-child) {
+  margin-top: 0.6rem;
+}
+
+header.nav-desktop {
+  position: fixed;
+  z-index: 100000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 3px solid #008080;
+}
+@media (max-width: 900px) {
+  header.nav-desktop {
+    display: none;
+  }
+}
+header.nav-mobile {
+  position: fixed;
+  z-index: 100000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: none;
+  background: #fff;
+  border-bottom: 3px solid #008080;
+  padding: 1rem;
+  text-align: center;
+}
+header.nav-mobile .mobile-navlist {
+  padding: 1rem;
+  background: #fff;
+  border-right: 3px solid #008080;
+  position: fixed;
+  height: 100%;
+  width: 250px;
+  z-index: 10001234;
+  left: 0;
+  top: 0;
+  transition: transform 0.3s ease;
+}
+header.nav-mobile .mobile-navlist.close {
+  transform: translateX(-100%);
+}
+header.nav-mobile .mobile-navlist.open {
+  transform: translateX(0%);
+}
+header.nav-mobile .mobile-navlist-item {
+  padding: 1rem;
+}
+header.nav-mobile .mobile-navlist-item:not(:last-child) {
+  border-bottom: 2px solid #3331;
+}
+header.nav-mobile .ham-icon {
+  position: absolute;
+  height: 60%;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (max-width: 900px) {
+  header.nav-mobile {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
