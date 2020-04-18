@@ -1,6 +1,7 @@
 /**
  * CoVoucher20 CSS stylesheet
  */
+
 * {
   margin: 0;
   padding: 0;
@@ -186,7 +187,8 @@ footer {
 
 .annotation {
   background: #fff;
-  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25), 0 8px 16px -8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+    0 8px 16px -8px rgba(0, 0, 0, 0.3);
   border-radius: 4px;
   max-width: 800px;
   margin: 25px auto;
@@ -251,7 +253,7 @@ footer {
   font-size: 14px;
 }
 
-.annotation.card p + p {
+.annotation.card p+p {
   margin-top: 10px;
 }
 
@@ -265,7 +267,7 @@ footer {
   text-align: right;
 }
 
-.annotation.card input[type=submit],
+.annotation.card input[type='submit'],
 .annotation.card button {
   margin: 0;
   width: auto;
@@ -273,7 +275,7 @@ footer {
   margin-right: 10px;
 }
 
-.annotation.card input[type=submit].primary-action,
+.annotation.card input[type='submit'].primary-action,
 .annotation.card button.primary-action {
   background: #556cd6;
   color: #fff;
@@ -293,12 +295,14 @@ footer {
 }
 
 /* public pages */
+
 .heading {
   display: block;
   margin: 40px 40px 0 0;
 }
 
 /* slider in homepage */
+
 .slider-holder {
   width: 600px;
   height: 400px;
@@ -316,6 +320,7 @@ footer {
   height: 400px;
   clear: both;
   position: relative;
+
   -webkit-transition: left 2s;
   -moz-transition: left 2s;
   -o-transition: left 2s;
@@ -329,35 +334,35 @@ footer {
   position: relative;
 }
 
-#slider-image-1:target ~ .image-holder {
+#slider-image-1:target~.image-holder {
   left: 0px;
 }
 
-#slider-image-2:target ~ .image-holder {
+#slider-image-2:target~.image-holder {
   left: -600px;
 }
 
-#slider-image-3:target ~ .image-holder {
+#slider-image-3:target~.image-holder {
   left: -1200px;
 }
 
-#slider-image-4:target ~ .image-holder {
+#slider-image-4:target~.image-holder {
   left: -1800px;
 }
 
-#slider-image-5:target ~ .image-holder {
+#slider-image-5:target~.image-holder {
   left: -2400px;
 }
 
-#slider-image-6:target ~ .image-holder {
+#slider-image-6:target~.image-holder {
   left: -3000px;
 }
 
-#slider-image-7:target ~ .image-holder {
+#slider-image-7:target~.image-holder {
   left: -3600px;
 }
 
-#slider-image-8:target ~ .image-holder {
+#slider-image-8:target~.image-holder {
   left: -4200px;
 }
 
@@ -430,7 +435,7 @@ p.copyright {
   letter-spacing: 0.02em;
 }
 
-.form input[type=submit],
+.form input[type='submit'],
 .form button,
 .form a.button {
   text-align: center;
@@ -492,7 +497,7 @@ fieldset .row {
   padding: 12px 20px 13px;
 }
 
-fieldset .row:not(.hidden) ~ .row {
+fieldset .row:not(.hidden)~.row {
   border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
@@ -506,7 +511,7 @@ fieldset .row::before {
 }
 
 fieldset .row.select::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 9px;
   height: 5px;
@@ -572,7 +577,7 @@ fieldset .row.preset {
   padding: 10px;
 }
 
-input[type=submit],
+input[type='submit'],
 button,
 a.button {
   display: block;
@@ -582,7 +587,8 @@ a.button {
   border-style: none;
   border-radius: 4px;
   background-color: #fff;
-  box-shadow: 0 2px 5px -1px rgba(50, 50, 93, 0.25), 0 1px 3px -1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 5px -1px rgba(50, 50, 93, 0.25),
+    0 1px 3px -1px rgba(0, 0, 0, 0.3);
   font-size: 14px;
   font-weight: 500;
   color: #51586d;
@@ -591,7 +597,7 @@ a.button {
   -webkit-appearance: none;
 }
 
-input[type=submit]:hover,
+input[type='submit']:hover,
 button:hover,
 a.button:hover {
   color: #2a2f45;
@@ -599,7 +605,7 @@ a.button:hover {
   outline: 0;
 }
 
-input[type=submit]:active,
+input[type='submit']:active,
 button:active,
 a.button:active {
   outline: 0;
@@ -607,8 +613,8 @@ a.button:active {
 
 .button.primary,
 button.primary,
-input[type=submit].primary {
-  font-family: "Varela Round";
+input[type='submit'].primary {
+  font-family: 'Varela Round';
   font-size: 17px;
   font-weight: 600;
   text-transform: uppercase;
@@ -623,24 +629,24 @@ input[type=submit].primary {
 
 .button.primary:hover,
 button.primary:hover,
-input[type=submit].primary:hover {
+input[type='submit'].primary:hover {
   color: white;
 }
 
 button.primary:disabled,
 .button.primary:disabled,
-input[type=submit].primary:disabled {
+input[type='submit'].primary:disabled {
   background: #e6ebf1;
   color: #aab7c4;
   cursor: default;
 }
 
-input[type=submit].secondary {
+input[type='submit'].secondary {
   color: #313b3f;
   background: #fff;
 }
 
-input[type=submit].secondary:active {
+input[type='submit'].secondary:active {
   background: #f5f6f7;
 }
 
@@ -651,7 +657,7 @@ a.button:hover {
 
 header button,
 header a.button,
-header input[type=submit] {
+header input[type='submit'] {
   margin: 15px 0 0;
   padding: 0 16px;
   height: 36px;
@@ -735,26 +741,32 @@ form a.button {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
+
+  .features__tile {
+    padding: 1rem;
+    flex-basis: 31%;
+    background: #f4f4f4;
+
+    hr {
+      display: block;
+      width: 100%;
+      margin: 1rem 0rem;
+      background: #008080;
+      height: 2px;
+      border: none;
+      outline: none;
+    }
+
+    img {
+      display: block;
+      width: 80%;
+      margin: auto;
+    }
+  }
+
 }
-.features .features__tile {
-  padding: 1rem;
-  flex-basis: 31%;
-  background: #f4f4f4;
-}
-.features .features__tile hr {
-  display: block;
-  width: 100%;
-  margin: 1rem 0rem;
-  background: #008080;
-  height: 2px;
-  border: none;
-  outline: none;
-}
-.features .features__tile img {
-  display: block;
-  width: 80%;
-  margin: auto;
-}
+
+
 
 .features h3 {
   margin: 0 0 10px;
@@ -783,7 +795,7 @@ form a.button {
   color: #292f45;
 }
 
-.user .block + .block {
+.user .block+.block {
   margin-left: 40px;
 }
 
@@ -831,7 +843,7 @@ form a.button {
   margin: auto;
 }
 
-.user .block.stripe input[type=submit] {
+.user .block.stripe input[type='submit'] {
   font-size: 16px;
   font-weight: 500;
   text-transform: unset;
@@ -879,7 +891,7 @@ form a.button {
   -webkit-appearance: none;
 }
 
-.owner-option input + span {
+.owner-option input+span {
   display: flex;
   position: relative;
   align-items: center;
@@ -889,8 +901,8 @@ form a.button {
   padding-left: 10px;
 }
 
-.owner-option input + span:before {
-  content: "";
+.owner-option input+span:before {
+  content: '';
   display: inline-block;
   position: relative;
   width: 20px;
@@ -901,8 +913,8 @@ form a.button {
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
 }
 
-.owner-option input:checked + span:after {
-  content: "";
+.owner-option input:checked+span:after {
+  content: '';
   display: flex;
   position: absolute;
   top: 5px;
@@ -918,6 +930,7 @@ form a.button {
 }
 
 /* Voucher page */
+
 .list.voucher {
   margin: 10px;
 }
@@ -931,6 +944,7 @@ form a.button {
 }
 
 /* Dashboard lists */
+
 .warning pre {
   padding: 10px;
 }
@@ -1035,7 +1049,7 @@ section.products {
   width: 100%;
 }
 
-.list .row + .row {
+.list .row+.row {
   border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
@@ -1091,6 +1105,7 @@ section.products {
     0 1px 3px -1px rgba(0, 0, 0, 0.3);
 }
 */
+
 .organizations .cell.photo {
   position: absolute;
   width: 50px;
@@ -1128,6 +1143,7 @@ section.products {
 
 /* Media queries */
 @media screen and (max-width: 500px) {
+
   /* Intro section */
   #top {
     font-size: 15px;
@@ -1230,8 +1246,8 @@ section.products {
   }
 
   .form.login,
-fieldset .row::before,
-.form.account fieldset .row::before {
+  fieldset .row::before,
+  .form.account fieldset .row::before {
     width: 80px;
   }
 
@@ -1259,7 +1275,7 @@ fieldset .row::before,
   }
 
   .form.login,
-.form.account {
+  .form.account {
     min-height: 210px;
   }
 
@@ -1270,7 +1286,7 @@ fieldset .row::before,
 
   /* Annotation */
   .annotation,
-.annotation.card {
+  .annotation.card {
     position: absolute;
     max-width: 100%;
     left: 0;
@@ -1279,7 +1295,8 @@ fieldset .row::before,
     margin: 0;
     padding: 17px 15px;
     border-radius: 0;
-    box-shadow: 0 13px 27px 2px rgba(50, 50, 93, 0.2), 0 8px 16px 7px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 13px 27px 2px rgba(50, 50, 93, 0.2),
+      0 8px 16px 7px rgba(0, 0, 0, 0.15);
   }
 
   .annotation.intro {
@@ -1323,12 +1340,12 @@ fieldset .row::before,
     padding-left: 20px;
   }
 
-  .annotation.card input[type=submit]:first-child {
+  .annotation.card input[type='submit']:first-child {
     margin-bottom: 5px;
   }
 
-  .annotation.card input[type=submit],
-.annotation.card button {
+  .annotation.card input[type='submit'],
+  .annotation.card button {
     padding: 8px 14px;
   }
 
@@ -1389,11 +1406,11 @@ fieldset .row::before,
     margin-top: 20px;
   }
 
-  .user .block.stripe input[type=submit] {
+  .user .block.stripe input[type='submit'] {
     margin: 10px 0;
   }
 
-  .user .block + .block {
+  .user .block+.block {
     margin: 0;
   }
 
@@ -1416,24 +1433,26 @@ fieldset .row::before,
     padding-left: 5px;
   }
 }
+
 /* CSS Animations */
 @keyframes slide-in-horizontal {
   0% {
     transform: translateY(100%);
   }
+
   100% {
     transform: none;
   }
 }
+
 @keyframes slide-in-vertical {
   0% {
     transform: translateY(50px);
     opacity: 0;
   }
+
   100% {
     transform: none;
     opacity: 1;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
