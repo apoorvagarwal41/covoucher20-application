@@ -1,0 +1,45 @@
+.button {
+  &,
+  &:link {
+    font-family: 'Varela Round';
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    display: inline-block !important;
+    border-radius: 500px;
+  }
+
+  &--large {
+    padding: 1rem 2rem;
+    font-size: 2rem;
+  }
+  &--medium {
+    font-size: 1rem;
+    padding: 0.6rem 1.3rem;
+  }
+
+  &--small {
+    font-size: 0.6rem;
+    padding: 0.5rem 0.9rem;
+  }
+  &.primary {
+    background: #008080;
+    color: white;
+  }
+}
+
+.inline-link-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #008080;
+  transition: transform 0.4s ease, background 0.3s ease, color 0.1s ease,
+    padding 0.3s ease;
+  border-radius: 6px;
+  &:hover {
+    padding: 0.3rem 0.6rem;
+    transform: rotateZ(-3deg) scale(1.03);
+    background: #008080;
+    color: white;
+  }
+}

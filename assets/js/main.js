@@ -1,15 +1,40 @@
+$('.owl-carousel').owlCarousel({
+  slideSpeed: 300,
+  paginationSpeed: 400,
+  items: 1,
+  itemsDesktop: false,
+  itemsDesktopSmall: false,
+  itemsTablet: false,
+  itemsMobile: false,
+  loop: true,
+  margin: 30,
+  nav: true,
+  responsive: {
+    0: {
+      items: 1,
+    },
+    600: {
+      items: 3,
+    },
+    1000: {
+      items: 3,
+    },
+  },
+})
 
-
-// Toggle between each type of legal entity (business or individual) in the signup form
-document.body.addEventListener('change', function(e) {
-  if (e.target.name !== 'kind') {
-    return;
+document.querySelector('.ham-icon').addEventListener('click', (e) => {
+  const navlist = document.querySelector('.mobile-navlist')
+  if (navlist.classList.contains('close')) {
+    navlist.classList.remove('close')
+    navlist.classList.add('open')
   }
+  e.stopPropagation()
+})
 
-  // Show any fields that apply to the new owner type
-  var ownerInfoRows = document.querySelectorAll('.owner-info');
-  ownerInfoRows.forEach(function(row) {
-    row.classList.toggle('hidden', !row.classList.contains(e.target.value));
-  });
-});
-
+document.body.addEventListener('click', (e) => {
+  const navlist = document.querySelector('.mobile-navlist')
+  if (navlist.classList.contains('open')) {
+    navlist.classList.remove('open')
+    navlist.classList.add('close')
+  }
+})
