@@ -219,3 +219,48 @@
     }
   }
 }
+
+/* Home Page Carousel Styling */
+.owl-carousel {
+  .owl-dots {
+    margin-top: 1rem;
+  }
+  .owl-nav {
+    position: absolute;
+    height: calc(100% - 20px);
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin: 0 !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    button.owl-next,
+    button.owl-prev {
+      display: inline-flex !important;
+      justify-content: center;
+      align-items: center;
+      padding: 0rem !important;
+      background: #008080 !important;
+      height: 3rem;
+      width: 3rem;
+      border-radius: 50%;
+      color: white;
+      font-size: 2rem;
+      margin: 0;
+      outline: none;
+      span {
+        line-height: 1;
+        // To account for the line-height difference
+        margin-top: -5px;
+        display: inline-block;
+      }
+    }
+    button.owl-next {
+      transform: translateX(50%);
+    }
+    button.owl-prev {
+      transform: translateX(-50%);
+    }
+  }
+}
