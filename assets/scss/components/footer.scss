@@ -6,7 +6,7 @@ footer {
   text-align: center;
   font-size: 0.9rem;
 
-  @media (max-width: 900px) {
+  @media (max-width: $mobile-breakpoint) {
     text-align: justify;
     padding: 2rem 2.3rem;
   }

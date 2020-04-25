@@ -11,7 +11,7 @@
 html {
   height: 100%;
 }
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
   html {
     font-size: 14px;
   }
@@ -62,7 +62,7 @@ header.nav-desktop {
   border-bottom: 3px solid #008080;
   background: #fff;
 }
-@media (max-width: 900px) {
+@media (max-width: 700px) {
   header.nav-desktop {
     display: none;
   }
@@ -73,6 +73,11 @@ header.nav-desktop .content {
   width: 65%;
   margin: 0 auto;
   justify-content: space-between;
+}
+@media (max-width: 1050px) {
+  header.nav-desktop .content {
+    width: 95%;
+  }
 }
 header.nav-desktop .content .links {
   display: flex;
@@ -146,7 +151,7 @@ header.nav-mobile .ham-icon {
   top: 50%;
   transform: translateY(-50%);
 }
-@media (max-width: 900px) {
+@media (max-width: 700px) {
   header.nav-mobile {
     display: block;
   }
@@ -160,7 +165,7 @@ footer {
   text-align: center;
   font-size: 0.9rem;
 }
-@media (max-width: 900px) {
+@media (max-width: 700px) {
   footer {
     text-align: justify;
     padding: 2rem 2.3rem;
@@ -235,7 +240,12 @@ footer p.copyright {
   max-width: 70%;
   margin: 0 auto;
 }
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
+  .section-content {
+    max-width: 78%;
+  }
+}
+@media (max-width: 700px) {
   .section-content {
     max-width: 85%;
   }
@@ -252,7 +262,7 @@ footer p.copyright {
   font-size: 2.5rem;
   letter-spacing: 0.01em;
 }
-@media (max-width: 900px) {
+@media (max-width: 700px) {
   .intro h1 {
     font-size: 1.7rem;
   }
@@ -269,7 +279,7 @@ footer p.copyright {
   justify-content: space-between;
   margin: 0 auto;
 }
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
   .features {
     flex-direction: column;
   }
@@ -298,7 +308,7 @@ footer p.copyright {
 .features .features__tile h4 {
   font-weight: normal;
 }
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
   .features .features__tile:not(:first-child) {
     margin-top: 2rem;
   }
@@ -343,7 +353,7 @@ footer p.copyright {
 .word-from-founder .header .founder-info h1 {
   font-size: 2.4rem;
 }
-@media (max-width: 900px) {
+@media (max-width: 700px) {
   .word-from-founder .header .founder-info h1 {
     font-size: 1.5rem;
   }
@@ -360,7 +370,7 @@ footer p.copyright {
   border: 2px solid white;
   border-radius: 50%;
 }
-@media (max-width: 900px) {
+@media (max-width: 700px) {
   .word-from-founder .header img {
     height: 6rem;
   }
@@ -429,6 +439,11 @@ footer p.copyright {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 700px) {
+  .owl-carousel .owl-nav {
+    display: none;
+  }
 }
 .owl-carousel .owl-nav button.owl-next,
 .owl-carousel .owl-nav button.owl-prev {
