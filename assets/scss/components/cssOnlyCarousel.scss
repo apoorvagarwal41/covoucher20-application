@@ -1,0 +1,135 @@
+.carousel-wrapper {
+  height: 25em;
+  position: relative;
+  width: 700px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.carousel-image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 2em 4em;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  max-width: 100%;
+}
+
+.carousel-image .text-container {
+  top: 85%;
+  position: relative;
+  transform: translate(0%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.carousel-image .text-container h2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.arrow {
+  border: solid #4f5260;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 0.6em;
+}
+
+.arrow-prev {
+  left: -30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(135deg);
+}
+
+.arrow-next {
+  right: -30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+/* Hide every image */
+[id^='image'] {
+  display: none;
+}
+
+.image-1 {
+  z-index: 2;
+  opacity: 1;
+  background: url('/assets/images/landing-slider-images/Outdoor activities.jpg')
+    center center no-repeat;
+  background-color: rgba(255, 251, 250, 0.4);
+  background-blend-mode: lighten;
+}
+
+.image-2 {
+  background: url('/assets/images/landing-slider-images/Local hotels.jpg')
+    center center no-repeat;
+  background-color: rgba(255, 251, 250, 0.4);
+  background-blend-mode: lighten;
+}
+
+.image-3 {
+  background: url('/assets/images/landing-slider-images/Spas.jpg') center center
+    no-repeat;
+  background-color: rgba(255, 251, 250, 0.4);
+  background-blend-mode: lighten;
+}
+
+.image-4 {
+  background: url('/assets/images/landing-slider-images/and many more.jpg')
+    center center no-repeat;
+  background-color: rgba(255, 251, 250, 0.4);
+  background-blend-mode: lighten;
+}
+
+.image-5 {
+  background: url('/assets/images/landing-slider-images/Restaurants.jpg') center
+    center no-repeat;
+  background-color: rgba(255, 251, 250, 0.4);
+  background-blend-mode: lighten;
+}
+
+.image-6 {
+  background: url('/assets/images/landing-slider-images/Bars.jpg') center center
+    no-repeat;
+  background-color: rgba(255, 251, 250, 0.4);
+  background-blend-mode: lighten;
+}
+
+.image-7 {
+  background: url('/assets/images/landing-slider-images/Music lessons.jpg')
+    center center no-repeat;
+  background-color: rgba(255, 251, 250, 0.4);
+  background-blend-mode: lighten;
+}
+
+.image-8 {
+  background: url('/assets/images/landing-slider-images/Hairdressers.jpg')
+    center center no-repeat;
+  background-color: rgba(255, 251, 250, 0.4);
+  background-blend-mode: lighten;
+}
+
+*:target ~ .image-1 {
+  opacity: 0;
+}
+
+#image-1:target ~ .image-1 {
+  opacity: 1;
+}
+
+#image-2:target ~ .image-2,
+#image-3:target ~ .image-3,
+#image-4:target ~ .image-4,
+#image-5:target ~ .image-5,
+#image-6:target ~ .image-6,
+#image-7:target ~ .image-7,
+#image-8:target ~ .image-8 {
+  z-index: 3;
+  opacity: 1;
+}

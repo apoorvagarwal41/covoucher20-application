@@ -41,6 +41,13 @@
     />
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/utility.css" />
+    <noscript>
+      <style>
+        .if-javascript-present {
+          display: none !important;
+        }
+      </style>
+    </noscript>
   </head>
   <body data-gr-c-s-loaded="true" cz-shortcut-listen="true">
     <!-- Desktop Navbar Start -->
@@ -65,7 +72,7 @@
     <!-- Desktop Navbar End-->
 
     <!-- Mobile Navbar Start -->
-    <header class="nav-mobile">
+    <header class="nav-mobile if-javascript-present">
       <ul class="mobile-navlist close">
         <li class="mobile-navlist-item">
           <a href="/">Home</a>
@@ -108,6 +115,54 @@
     </header>
     <!-- Mobile Navbar End-->
 
+    <!-- Mobile Nav Pure CSS Start -->
+    <noscript>
+      <header class="nav-container">
+        <div class="nav-content">
+          <a class="menu-toggle" href="#main-menu" aria-label="Open main menu"
+            ><div class="sr-only"><Open>main menu</Open></div>
+            <div class="fa fa-bars" aria-hidden="true"></div
+          ></a>
+          <a class="nav-logo" href="/">
+            <img src="./assets/images/logo_small-f274cf91.png" alt="" />
+          </a>
+          <nav class="main-menu" id="main-menu" aria-label="Main menu">
+            <a
+              class="menu-close"
+              id="main-menu-close"
+              href="#main-menu-toggle"
+              aria-label="Close main menu"
+              ><div class="fa fa-close" aria-hidden="true"></div
+            ></a>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/science">The science</a></li>
+              <li><a href="/team">Team</a></li>
+              <li><a href="/faq">FAQ</a></li>
+              <li><a href="/policies">Policies</a></li>
+              <li><a href="/contact">Contact us</a></li>
+              <li style="border: none;"><a href="/users/login">Log in</a></li>
+              <li class="mt--1">
+                <a class="button primary button--medium" href="/users/signup"
+                  >Create account</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <a
+            class="backdrop"
+            href="#main-menu-toggle"
+            aria-hidden="true"
+            tabindex="-1"
+            hidden
+          ></a>
+        </div>
+      </header>
+    </noscript>
+
+    <!-- Mobile Nav Pure CSS End-->
+
     <!-- Intro Section Start -->
     <section class="intro section section--fullpage">
       <div class="section-content">
@@ -119,43 +174,145 @@
         <div class="ta-center mt--1">
           <h1>We help local businesses through the pandemic</h1>
           <p class="mt--1">
-            CoVoucher20 is a platform for consumers to buy vouchers, use them
-            later, and support local businesses. Be there for them today, so
-            they can be there for you tomorrow.
+            oVoucher20 is a platform for consumers to plan holidays and help
+            local hotels through the pandemic. Anyone can start planning their
+            holidays now to escape the confinement, and we mutualize the
+            business risk and ensure that a hotel will be able to accommodate
+            your stay.
           </p>
         </div>
 
-        <div class="owl-carousel owl-theme mt--2">
-          <img
-            class="slider-image"
-            src="/assets/images/landing-slider-images/Bars.jpg"
-            alt="bar: Photo by Dogancan Ozturan on Unsplash."
-          /><img
-            class="slider-image"
-            src="/assets/images/landing-slider-images/Local hotels.jpg"
-            alt="restaurant: Photo by Priscilla Du Preez on Unsplash."
-          /><img
-            class="slider-image"
-            src="/assets/images/landing-slider-images/Hairdressers.jpg"
-            alt="local hotel: Photo by Toa Heftiba on Unsplash."
-          /><img
-            class="slider-image"
-            src="/assets/images/landing-slider-images/Music lessons.jpg"
-            alt="hairdresser: Photo by Guilherme Petri on Unsplash."
-          /><img
-            class="slider-image"
-            src="/assets/images/landing-slider-images/Outdoor activities.jpg"
-            alt="spa: Photo by alan caishan on Unsplash."
-          /><img
-            class="slider-image"
-            src="/assets/images/landing-slider-images/and many more.jpg"
-            alt="paragliding: Photo by Tomas Sobek on Unsplash."
-          />
+        <!-- Owl Carousel -->
+        <div class="owl-carousel owl-theme mt--2 if-javascript-present">
+          <div class="slide">
+            <img
+              class="slider-image"
+              src="/assets/images/landing-slider-images/Bars.jpg"
+              alt="bar: Photo by Dogancan Ozturan on Unsplash."
+            />
+            <span class="slide-text">Escapades</span>
+          </div>
+          <div class="slide">
+            <img
+              class="slider-image"
+              src="/assets/images/landing-slider-images/and many more.jpg"
+              alt="paragliding: Photo by Tomas Sobek on Unsplash."
+            />
+            <span class="slide-text">Connection</span>
+          </div>
+
+          <div class="slide">
+            <img
+              class="slider-image"
+              src="/assets/images/landing-slider-images/Outdoor activities.jpg"
+              alt="spa: Photo by alan caishan on Unsplash."
+            />
+            <span class="slide-text">Adventure</span>
+          </div>
+          <div class="slide">
+            <img
+              class="slider-image"
+              src="/assets/images/landing-slider-images/Music lessons.jpg"
+              alt="hairdresser: Photo by Guilherme Petri on Unsplash."
+            />
+            <span class="slide-text">Thrills</span>
+          </div>
+          <div class="slide">
+            <img
+              class="slider-image"
+              src="/assets/images/landing-slider-images/Hairdressers.jpg"
+              alt="local hotel: Photo by Toa Heftiba on Unsplash."
+            />
+            <span class="slide-text">Novelty</span>
+          </div>
+          <div class="slide">
+            <img
+              class="slider-image"
+              src="/assets/images/landing-slider-images/Local hotels.jpg"
+              alt="restaurant: Photo by Priscilla Du Preez on Unsplash."
+            />
+            <span class="slide-text">Exploration</span>
+          </div>
         </div>
+
+        <!-- CSS Only Carousel -->
+        <noscript>
+          <div class="carousel-wrapper">
+            <span id="image-1"></span><span id="image-2"></span
+            ><span id="image-3"></span><span id="image-4"></span
+            ><span id="image-5"></span><span id="image-6"></span
+            ><span id="image-7"></span><span id="image-8"></span>
+            <div
+              class="carousel-image image-1"
+              title="bar photo by Dogancan Ozturan on Unsplash."
+            >
+              <div class="text-container"><h2>Adventure</h2></div>
+              <a class="arrow arrow-prev" href="#image-8"></a
+              ><a class="arrow arrow-next" href="#image-2"></a>
+            </div>
+            <div
+              class="carousel-image image-2"
+              title="restaurant photo Photo by Priscilla Du Preez on Unsplash."
+            >
+              <div class="text-container"><h2>Exploration</h2></div>
+              <a class="arrow arrow-prev" href="#image-1"></a
+              ><a class="arrow arrow-next" href="#image-3"></a>
+            </div>
+            <div
+              class="carousel-image image-3"
+              title="local hotel photo by Toa Heftiba on Unsplash."
+            >
+              <div class="text-container"><h2>Community</h2></div>
+              <a class="arrow arrow-prev" href="#image-2"></a
+              ><a class="arrow arrow-next" href="#image-4"></a>
+            </div>
+            <div
+              class="carousel-image image-4"
+              title="hairdresser photo by Guilherme Petri on Unsplash."
+            >
+              <div class="text-container"><h2>Connection</h2></div>
+              <a class="arrow arrow-prev" href="#image-3"></a
+              ><a class="arrow arrow-next" href="#image-5"></a>
+            </div>
+            <div
+              class="carousel-image image-5"
+              title="spa photo by alan caishan on Unsplash."
+            >
+              <div class="text-container"><h2>Travels</h2></div>
+              <a class="arrow arrow-prev" href="#image-4"></a
+              ><a class="arrow arrow-next" href="#image-6"></a>
+            </div>
+            <div
+              class="carousel-image image-6"
+              title="paragliding photo by Tomas Sobek on Unsplash."
+            >
+              <div class="text-container"><h2>Escapades</h2></div>
+              <a class="arrow arrow-prev" href="#image-5"></a
+              ><a class="arrow arrow-next" href="#image-7"></a>
+            </div>
+            <div
+              class="carousel-image image-7"
+              title="guitar photo by Derek Truninger on Unsplash."
+            >
+              <div class="text-container"><h2>Thrills</h2></div>
+              <a class="arrow arrow-prev" href="#image-6"></a
+              ><a class="arrow arrow-next" href="#image-8"></a>
+            </div>
+            <div
+              class="carousel-image image-8"
+              title="restaurant photo by Tomas Sobek on Unsplash."
+            >
+              <div class="text-container"><h2>Novelty</h2></div>
+              <a class="arrow arrow-prev" href="#image-7"></a
+              ><a class="arrow arrow-next" href="#image-1"></a>
+            </div>
+          </div>
+        </noscript>
+        <!-- CSS Only Carousel -->
 
         <div class="signup-buttons ta-center mt--2">
           <a class="button button--medium primary" href="/users/signup"
-            >Sign up</a
+            >Create Account</a
           >
         </div>
       </div>
@@ -175,26 +332,19 @@
         <div class="content">
           <p class="pb--1 hello">Hello!</p>
           <p class="pb--1">
-            My name is Miguel Morin and I founded CoVoucher20. I studied the
-            Great Depression of 1929 for my PhD in Economics. In the US during
-            the 1930s, millions of people lost their businesses and their homes;
-            they lived in makeshift camps called Hoovervilles.
-          </p>
-          <p class="pb--1">
-            When countries started locking down, I knew that a crisis of this
-            size could mean death for millions of local businesses. So I used my
+            My name is Miguel Morin and I am the founder of CoVoucher20. When
+            countries started locking down, I knew that a crisis of this size
+            could mean the end of millions of local hotels. I have used my
             background in software development and my recent passion in
             entrepreneurship to launch CoVoucher20 in record time.
-          </p>
-          <p>
-            Before CoVoucher20, I had studied computer science at Ecole
-            Polytechnique in Paris; done a PhD in Economics at Columbia
-            University in New York; worked at the Faculty of Economics at the
-            University of Cambridge in the UK; worked in artificial intelligence
-            at The Alan Turing Institute in London; and launched Puzzli, a smart
-            toy to teach children to read.
+            <a href="/story" class="link light">Read our story</a>
           </p>
         </div>
+        <img
+          class="banner mt--2"
+          src="/assets/images/logo_600x130_website_secondary_tagline.png"
+          alt="CoVoucher20: buy now, use later, spread the hope"
+        />
       </div>
     </section>
     <!-- Word from the founder end -->
@@ -202,20 +352,6 @@
     <section class="section">
       <div class="section-content">
         <div>
-          <h1>Similar initiatives</h1>
-          <hr class="divier mt--1 mb--1" />
-          <p class="pb--1">
-            Several other initiatives have heeded the challenge and are
-            promoting a similar concept. This is no time for bickering and
-            businesses need all the help they can get, so we decided to promote
-            them here.
-          </p>
-          <p>
-            It looks like no similar initiatives are available near you. If you
-            know of one and would like it listed, please contact us.
-          </p>
-        </div>
-        <div class="pt--2">
           <h1>The challenge</h1>
           <hr class="divier mt--1 mb--1" />
 
@@ -237,7 +373,9 @@
         </div>
         <div class="features pt--3">
           <div class="features__tile">
-            <img src="/assets/images/newsagency-logos/newspapers_New York Times.png" />
+            <img
+              src="/assets/images/newsagency-logos/newspapers_New York Times.png"
+            />
             <hr />
 
             <h3>Coronavirus Threatens Small Businesses</h3>
@@ -255,7 +393,9 @@
           </div>
 
           <div class="features__tile">
-            <img src="/assets/images/newsagency-logos/newspapers_The Guardian.png" />
+            <img
+              src="/assets/images/newsagency-logos/newspapers_The Guardian.png"
+            />
             <hr />
             <h3>
               'It's really hit us': UK small businesses on impact of coronavirus
@@ -274,7 +414,9 @@
           </div>
 
           <div class="features__tile">
-            <img src="/assets/images/newsagency-logos/newspapers_Le Monde.png" />
+            <img
+              src="/assets/images/newsagency-logos/newspapers_Le Monde.png"
+            />
             <hr />
 
             <h3>
@@ -305,8 +447,8 @@
         <ul>
           <li>
             <span class="count">1</span>
-            Local businesses sign up, enter their location, explain their
-            business, and enter details.
+            Local hotels create an account, enter their location, and provide
+            the details of their business.
           </li>
           <li>
             <span class="count">2</span>
@@ -315,7 +457,7 @@
           </li>
           <li>
             <span class="count">3</span>
-            Patrons sign up and buy vouchers that they would like to use after
+            Consumers sign up and buy vouchers that they would like to use after
             the pandemic.
           </li>
           <li>
@@ -334,9 +476,7 @@
           <p class="pt--1">
             This is our most frequent question, so we dedicated a large part of
             our
-            <a href="/faq" class="inline-link-btn"
-              >Frequently Asked Questions</a
-            >
+            <a href="/faq" class="link">Frequently Asked Questions</a>
             to an example with numbers and the economics of CoVoucher20.
           </p>
         </div>
@@ -349,7 +489,7 @@
         </div>
         <div class="mt--2 pb--3">
           <a class="button button--medium primary" href="/users/signup"
-            >Sign up</a
+            >Create Account</a
           >
         </div>
       </div>
@@ -360,10 +500,12 @@
       <p class="copyright">
         © 2020 The CoVoucher Authors, All rights reserved.
       </p>
-      CoVoucher, CoVoucher20, and CoVoucher-20 are trademarks of Covoucher Ltd,
-      a company limited by shares and registered in England and Wales
-      (12526044), and of Genuine Happiness, Serviços Digitais Unipessoal Lda, a
-      company limited by shares and registered in Portugal (515934151).
+      <p class="ta-center">
+        CoVoucher, CoVoucher20, and CoVoucher-20 are trademarks of Covoucher
+        Ltd, a company limited by shares and registered in England and Wales
+        (12526044), and of Genuine Happiness, Serviços Digitais Unipessoal Lda,
+        a company limited by shares and registered in Portugal (515934151).
+      </p>
     </footer>
     <!-- Footer End -->
 

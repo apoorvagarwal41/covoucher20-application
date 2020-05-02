@@ -38,8 +38,37 @@
   border-radius: 6px;
   &:hover {
     padding: 0.3rem 0.6rem;
-    transform: rotateZ(-3deg) scale(1.03);
+    // transform: rotateZ(-3deg) scale(1.03);
     background: #008080;
     color: white;
+  }
+}
+
+.link {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+  font-weight: bold;
+  &.light {
+    &:after {
+      background: #ffffff50;
+    }
+  }
+  &:hover:after {
+    height: 100%;
+    bottom: 0;
+  }
+  &::after {
+    position: absolute;
+    content: '';
+    bottom: 0.2em;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 2px;
+    background: #00808069;
+    transition: height 0.3s ease, bottom 0.3s ease;
   }
 }
